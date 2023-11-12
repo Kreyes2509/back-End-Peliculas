@@ -11,10 +11,6 @@ class DirectoresController extends Controller
     {
         $Directors = Directores::all();
 
-        return response()->json([
-            "Status"=>200,
-            "msg"=>"directors",
-            "directors"=> $Directors
-        ],200);
+        return response()->json($Directors);
     }
 }

@@ -15,10 +15,6 @@ class PeliculasController extends Controller
                             ->join("directores","directores.id","=","peliculas.DirectorID")
                             ->get();
 
-        return response()->json([
-            "Status"=>200,
-            "msg"=>"Movies",
-            "Movies"=> $Movies
-        ],200);
+        return response()->json($Movies);
     }
 }

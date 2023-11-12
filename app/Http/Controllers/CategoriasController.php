@@ -11,10 +11,6 @@ class CategoriasController extends Controller
     {
         $Categories = Categorias::all();
 
-        return response()->json([
-            "Status"=>200,
-            "msg"=>"categories",
-            "categories"=> $Categories
-        ],200);
+        return response()->json($Categories);
     }
 }
